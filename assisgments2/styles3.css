@@ -28,3 +28,45 @@ table {
     padding: 20px;
   }
   
+  /* typography */
+
+html {
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
+  }
+  
+  thead th,
+  tfoot th {
+    font-family: "Rock Salt", cursive;
+  }
+  
+  th {
+    letter-spacing: 0.2rem;
+  }
+  
+  td {
+    letter-spacing: 00.1rem;
+  }
+  
+  tbody td {
+    text-align: center;
+  }
+  
+  tfoot th {
+    text-align: right;
+  }
+  
+  /* graphics and colors */
+
+thead,
+tfoot {
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyHSCBpYHHn8TG-urtpZ1NPdUDV10VpzE11A&s);
+  color: rgb(182, 11, 11);
+  text-shadow: 1px 1px 1px rgb(90, 82, 82);
+}
+
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 50%));
+  border: 3px solid rgb(16, 137, 224);
+}
