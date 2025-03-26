@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    background: #ccc;
+  }
+  
+  article {
+    width: 210mm;
+    height: 297mm;
+    margin: 20px auto;
+    position: relative;
+    /* Basic styles */
+    background-color: white;
+    border-top: 1mm solid #1E8D9F;
+    border-bottom: 1mm solid #1E8D9F;
+
+    /* Fallback background */
+    background-image: url('top-image.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    /* Multiple backgrounds with gradient overlay */
+    background-image: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0) 20%,
+            rgba(0, 0, 0, 0) 80%,
+            rgba(0, 0, 0, 0.2)
+        ),
+        url('top-image.png'),
+        url('bottom-image.png');
+    background-position: 
+        center center,
+        top center,
+        bottom center;
+    background-repeat: 
+        no-repeat,
+        no-repeat,
+        no-repeat;
+  }
+  
+  address {
+    position: absolute;
+    bottom: 8mm;
+    right: 20mm;
+  }
+  
+  h1 {
+    position: absolute;
+    top: 12mm;
+    left: 20mm;
+    width: 128px;
+    height: 128px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 44px 0;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    /* Add logo background */
+    background-image: url('logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 64px;
+    
+    /* Filter-based drop shadow */
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+
+
+  }
+  

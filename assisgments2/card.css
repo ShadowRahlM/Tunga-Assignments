@@ -1,0 +1,110 @@
+/*
+Specificity calculations:
+.card               -> 0,0,1,0 (10)
+.card header        -> 0,0,2,0 (20)
+.card footer        -> 0,0,2,0 (20)
+.card article img   -> 0,0,3,0 (30)
+*/
+
+/* Root styles */
+html {
+    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-size: 10px;
+    background-color: #ccc;
+}
+
+body {
+    margin: 0;
+}
+
+/* Card container */
+.card {
+    width: 35em;
+    height: 24em;
+    margin: 5em auto;
+    background-color: red;
+    border: 0.2em solid black;
+    border-radius: 1.5em;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header styles */
+.card header {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0)
+    );
+    border-radius: 1.5em 1.5em 0 0;
+    height: 3em;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+/* Article styles */
+.card article {
+    height: 12em;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 1em;
+    color: whitesmoke;
+    font-size: larger;
+    /* overflow: auto; */
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.card article img {
+    max-height: 100%;
+    float: right;
+    margin:0 1em;
+}
+
+.card article p {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0 1em;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    line-height: 1.5;
+}
+
+/* Footer styles */
+.card footer {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.1)
+    );
+    border-radius: 0 0 1.5em 1.5em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3em;
+    padding: 1em;
+    box-sizing: border-box;
+    margin:0.2em;
+}
+
+/* Typography */
+.card h2 {
+    font-size: 2em;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+}
+
+.card footer p {
+    font-size: 1.5em;
+    line-height: 2;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 2px;
+    padding-bottom: 0.6em;
+}
+
+/* Reset shared styles */
+.card h2,
+.card p {
+    margin: 0;
+}
