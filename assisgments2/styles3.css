@@ -1,61 +1,61 @@
 /* spacing */
 
 table {
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-    border: 3px solid purple;
-  }
-  
-  thead th:nth-child(1) {
-    width: 30%;
-  }
-  
-  thead th:nth-child(2) {
-    width: 20%;
-  }
-  
-  thead th:nth-child(3) {
-    width: 15%;
-  }
-  
-  thead th:nth-child(4) {
-    width: 35%;
-  }
-  
-  th,
-  td {
-    padding: 20px;
-  }
-  
-  /* typography */
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th,
+td {
+  padding: 1.4rem;
+}
+
+/* typography */
 
 html {
-    font-family: "helvetica neue", helvetica, arial, sans-serif;
-  }
-  
-  thead th,
-  tfoot th {
-    font-family: "Rock Salt", cursive;
-  }
-  
-  th {
-    letter-spacing: 0.2rem;
-  }
-  
-  td {
-    letter-spacing: 00.1rem;
-  }
-  
-  tbody td {
-    text-align: center;
-  }
-  
-  tfoot th {
-    text-align: right;
-  }
-  
-  /* graphics and colors */
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+}
+
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
+}
+
+th {
+  letter-spacing: 0.2rem;
+}
+
+td {
+  letter-spacing: 00.1rem;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+
+/* graphics and colors */
 
 thead,
 tfoot {
@@ -70,3 +70,34 @@ tfoot td {
   background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 50%));
   border: 3px solid rgb(16, 137, 224);
 }
+
+/* zebra striping */
+
+tbody tr:nth-child(odd) {
+  background-color: #112505dc;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #153d4d;
+}
+
+tbody tr {
+  background-image: url(noise.png);
+}
+
+table {
+  background-color: #332f2a;
+}
+ 
+/* caption */
+
+caption {
+    font-family: "Rock Salt", cursive;
+    padding: 1.04rem;
+    font-style: italic;
+    caption-side: inline-start start;
+    color: #630a0a;
+    text-align: left;
+    letter-spacing: 0.2rem;
+  }
+  
