@@ -1,0 +1,43 @@
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+/* Add padding and vertical alignment to all cells */
+th, td {
+    padding: 0.3em;
+    vertical-align: top;
+}
+
+/* Align text columns to the left */
+th:not([data-type="number"]),
+td:not([data-type="number"]) {
+    text-align: left;
+}
+
+/* Align number columns to the right */
+th[data-type="number"],
+td[data-type="number"] {
+    text-align: right;
+}
+
+/* Footer styles */
+tfoot {
+    border-top: 1px solid #999;
+}
+
+tfoot th {
+    text-align: right;
+}
+
+tfoot td {
+    text-align: left;
+}
+
+/* Zebra striping for main table body */
+tbody tr:nth-child(odd) {
+    background-color: #eee;
+}
