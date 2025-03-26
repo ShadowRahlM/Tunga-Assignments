@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.wrapper > * {
+    margin: 20px;
+}
+
+.box {
+    border: 5px solid darkblue;
+    width: 200px;
+    height: 200px;
+    padding: 0.2rem;
+    background-color: rgb(26, 25, 28);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.cover {
+    object-fit:cover;
+}
+
+.contain {
+    object-fit:contain;
+}
