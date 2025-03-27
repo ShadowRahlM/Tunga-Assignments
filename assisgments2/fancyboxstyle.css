@@ -1,0 +1,39 @@
+div {
+    /* Width of 200px for a large box */
+    width: 200px;
+    height: 120px;
+    
+    /* Center the box horizontally */
+    margin: 0 auto;
+    
+    /* Center the text both horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* 17px ÷ 16px (default browser font-size) = 1.0625rem */
+    font-size: 1.0625rem;
+    background-color: #4a90e2;
+    
+    /* Text color and shadow */
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    
+    /* border radius */
+    border-radius: 8px;
+    border: 1px solid #3570b2;
+    
+    /* Linear gradient overlay */
+    background-image: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
+    
+    /* Multiple box shadows */
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),            /* Raised effect */           /*##AI generated ##*/
+        inset 1px 1px 3px rgba(255, 255, 255, 0.3),  /* Top-left highlight */
+        inset -2px -2px 3px rgba(0, 0, 0, 0.2);      /* Bottom-right shadow */
+}
