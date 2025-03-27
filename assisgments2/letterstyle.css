@@ -12,9 +12,9 @@
   }
   
   article {
-    width: 210mm;
+    width: 210mm;/*creates an A4 paper size 210mm *297mm */
     height: 297mm;
-    margin: 20px auto;
+    margin: 20px auto;/* center the page to the center*/
     position: relative;
     /* Basic styles */
     background-color: white;
@@ -36,6 +36,27 @@
         ),
         url('top-image.png'),
         url('bottom-image.png');
+    /*image positioning for all  Let me explain this CSS code which handles multiple background images:
+
+    ### Background Position
+    The `background-position` property is defining positions for three separate background images:
+    - First image: `center center` - positioned in the middle both horizontally and vertically
+    - Second image: `top center` - positioned at the top and centered horizontally
+    - Third image: `bottom center` - positioned at the bottom and centered horizontally### 
+  */ background-position:
+        center center,
+        top center,
+        bottom center;
+    background-repeat: /*simply no image should repeat when this rule is set with each instance corresponding to one of the bkgs imgs */
+        no-repeat,
+        no-repeat,
+        no-repeat;
+  }
+  /*.element <=placeholder  {
+    background-image: 
+        url('overlay.png'),
+        url('pattern.png'),  #### this whole code is the same with the upper code but implemented with background shorthand###
+        url('base.png');
     background-position: 
         center center,
         top center,
@@ -44,7 +65,7 @@
         no-repeat,
         no-repeat,
         no-repeat;
-  }
+}*/
   
   address {
     position: absolute;
@@ -52,6 +73,34 @@
     right: 20mm;
   }
   
+/*
+ * Styles for the main heading (h1) element
+ * --------------------------------------
+ * This CSS configures a circular heading with a logo background
+ * and sophisticated text styling.
+ *
+ * Positioning:
+ * - Absolutely positioned 12mm from top and 20mm from left
+ * - Fixed dimensions of 128x128 pixels
+ *
+ * Typography:
+ * - 20px font size
+ * - 1px letter spacing
+ * - Center-aligned text
+ * - White color with black text shadow   ####AI generated documentation ####AI documentation
+ * - 44px vertical padding
+ *
+ * Logo Background:
+ * - Uses 'logo.png' as background image
+ * - Covers entire element
+ * - No repetition
+ * - Circular shape with 64px border radius
+ *
+ * Effects:
+ * - Modern drop shadow using CSS filter
+ * - 3px offset in both x and y directions
+ * - Semi-transparent black shadow (50% opacity)
+ */
   h1 {
     position: absolute;
     top: 12mm;
