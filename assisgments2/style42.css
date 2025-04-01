@@ -1,184 +1,202 @@
 /* General setup */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0 auto;
-    min-width: 1000px;
-    max-width: 1400px;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 /* Layout */
 .open {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 20px;
 }
 
 section {
-    flex: 2;
-    padding: 20px;
+  flex: 2;
+  padding: 20px;
 }
 
 aside {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }
 
 nav {
-    flex: 0.5;
-    padding: 20px;
+  flex: 0.5;
+  padding: 20px;
 }
 
 /* Header styling */
 header {
-    border-top: 5px solid #a73c3c;
-    border-bottom: 5px solid #a73c3c;
-    padding: 2rem;
-    text-align: center;
+  border-top: 5px solid #a73c3c;
+  border-bottom: 5px solid #a73c3c;
+  padding: 2rem;
+  text-align: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    letter-spacing: 0.1rem;
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 0.1rem;
 }
 
 /* Footer styling */
 footer {
-    clear: both;
-    border-top: 5px solid #a73c3c;
-    border-bottom: 5px solid #a73c3c;
-    padding: 20px;
-    text-align: center;
+  clear: both;
+  border-top: 5px solid #a73c3c;
+  border-bottom: 5px solid #a73c3c;
+  padding: 20px;
+  text-align: center;
 }
 
 /* Typography improvements */
 h2 {
-    color: #333;
-    font-size: 1.8rem;
-    margin-top: 2rem;
+  color: #333;
+  font-size: 1.8rem;
+  margin-top: 2rem;
 }
 
 /* Base styles */
 section p:first-line {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #a73c3c; /* Updated to HEX color */
+  font-size: 2rem;
+  font-weight: bold;
+  color: #a73c3c; /* Updated to HEX color */
 }
 
 /* Add indentation to paragraphs that directly follow headings */
 section :is(h1, h2, h3, h4, h5, h6) + p {
-    text-indent: 20px;
+  text-indent: 20px;
 }
 
 /* Link states styling */
 a {
-    color: #a73c3c;
-    text-decoration: underline;
-    outline: none;
-    transition: all 0.3s ease;
+  color: #a73c3c;
+  text-decoration: underline;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
 a:visited {
-    color: #8b2e2e;
+  color: #8b2e2e;
 }
 
 a:hover,
 a:focus {
-    color: #c84848;
-    text-decoration: none;
+  color: #c84848;
+  text-decoration: none;
 }
 
 a:active {
-    color: #ff5252;
-    transform: translateY(1px);
+  color: #ff5252;
+  transform: translateY(1px);
 }
 
 /* External link styling */
 a[href^="http"]:not([href*="yourdomain.com"])::after {
-    content: "";
-    background-image: url('external-link-52.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    margin-left: 0.2em;
-    vertical-align: middle;
+  content: "";
+  background-image: url("external-link-52.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.2em;
+  vertical-align: middle;
 }
 
 /* Optional: Add spacing for better visibility */
 a[href^="http"]:not([href*="yourdomain.com"]) {
-    margin-right: 0.4em;
+  margin-right: 0.4em;
 }
 
 /* List styling */
-ul, ol {
-    margin: 1.5em 0;  /* Same spacing as between paragraphs */
-    padding-left: 2em;
+ul,
+ol {
+  margin: 1.5em 0; /* Same spacing as between paragraphs */
+  padding-left: 2em;
 }
 
 ul li {
-    position: relative;
-    list-style: none;
-    line-height: 1.5;  /* Match paragraph line height */
-    padding-left: 1em;
-    margin-bottom: 0.5em;
+  position: relative;
+  list-style: none;
+  line-height: 1.5; /* Match paragraph line height */
+  padding-left: 1em;
+  margin-bottom: 0.5em;
 }
 
 /* Custom bullet styling */
 ul li::before {
-    content: "";
-    position: absolute;
-    left: -1em;
-    top: 0.6em;
-    width: 6px;
-    height: 6px;
-    background-color: #a73c3c;  /* Matches link color */
-    border-radius: 50%;
-    transform: rotate(45deg);
+  content: "";
+  position: absolute;
+  left: -1em;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #a73c3c; /* Matches link color */
+  border-radius: 50%;
+  transform: rotate(45deg);
 }
 
 /* Ordered list numbers styling */
 ol {
-    counter-reset: list-counter;
+  counter-reset: list-counter;
 }
 
 ol li {
-    position: relative;
-    list-style: none;
-    line-height: 1.5;
-    padding-left: 1em;
-    margin-bottom: 0.5em;
-    counter-increment: list-counter;
+  position: relative;
+  list-style: none;
+  line-height: 1.5;
+  padding-left: 1em;
+  margin-bottom: 0.5em;
+  counter-increment: list-counter;
 }
 
 ol li::before {
-    content: counter(list-counter);
-    position: absolute;
-    left: -2em;
-    color: #a73c3c;
-    font-weight: bold;
-    font-size: 0.9em;
+  content: counter(list-counter);
+  position: absolute;
+  left: -2em;
+  color: #a73c3c;
+  font-weight: bold;
+  font-size: 0.9em;
 }
 
 /* Responsive improvements */
 @media (max-width: 1000px) {
-    body {
-        min-width: auto;
-    }
-    
-    .open {
-        flex-direction: column;
-    }
-    
-    section, aside, nav {
-        width: 100%;
-    }
+  body {
+    min-width: auto;
+  }
+
+  .open {
+    flex-direction: column;
+  }
+
+  section,
+  aside,
+  nav {
+    width: 100%;
+  }
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  justify-content: center;
+}
+
+nav ul li {
+  min-width: 300px;
+  list-style: none;
+  font-size: 2rem;
+  border: 1px solid #a66;
+  text-align: center;
+  padding: 20px 10px 20px 10px;
 }
