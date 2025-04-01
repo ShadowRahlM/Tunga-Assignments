@@ -1,4 +1,6 @@
-body{
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
     font-size: 18px;
 }
 
@@ -14,15 +16,18 @@ header{
     word-spacing: 5rem;
 
 }
+.open{
+    display: flex;
+}
 aside{
 display:flex
 }
 section p:first-line {
-    /* font-size: 1.6rem; */
-    font-size: 2rem;
+        font-size: 2rem;
     font-weight: bold;
     color: #a73c3c; /* Updated to HEX color */
 }
+
 /* Add indentation to paragraphs that directly follow headings */
 section :is(h1, h2, h3, h4, h5, h6) + p {
     text-indent: 20px;
