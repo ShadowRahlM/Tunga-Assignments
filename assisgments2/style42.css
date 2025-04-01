@@ -1,0 +1,120 @@
+body{
+    font-size: 18px;
+}
+
+header{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    border-top: 1px solid  red;
+    border-bottom: 1px solid red;
+    font-size: 0.5rem;
+    letter-spacing: 1.15rem;
+    line-height: 6rem;
+    word-spacing: 5rem;
+
+}
+aside{
+display:flex
+}
+section p:first-line {
+    /* font-size: 1.6rem; */
+    font-size: 2rem;
+    font-weight: bold;
+    color: #a73c3c; /* Updated to HEX color */
+}
+/* Add indentation to paragraphs that directly follow headings */
+section :is(h1, h2, h3, h4, h5, h6) + p {
+    text-indent: 20px;
+}
+
+/* Link states styling */
+a {
+    color: #a73c3c;
+    text-decoration: underline;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+a:visited {
+    color: #8b2e2e;
+}
+
+a:hover,
+a:focus {
+    color: #c84848;
+    text-decoration: none;
+}
+
+a:active {
+    color: #ff5252;
+    transform: translateY(1px);
+}
+
+/* External link styling */
+a[href^="http"]:not([href*="yourdomain.com"])::after {
+    content: "";
+    background-image: url('external-link-52.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.2em;
+    vertical-align: middle;
+}
+
+/* Optional: Add spacing for better visibility */
+a[href^="http"]:not([href*="yourdomain.com"]) {
+    margin-right: 0.4em;
+}
+
+/* List styling */
+ul, ol {
+    margin: 1.5em 0;  /* Same spacing as between paragraphs */
+    padding-left: 2em;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    line-height: 1.5;  /* Match paragraph line height */
+    padding-left: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* Custom bullet styling */
+ul li::before {
+    content: "";
+    position: absolute;
+    left: -1em;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    background-color: #a73c3c;  /* Matches link color */
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+
+/* Ordered list numbers styling */
+ol {
+    counter-reset: list-counter;
+}
+
+ol li {
+    position: relative;
+    list-style: none;
+    line-height: 1.5;
+    padding-left: 1em;
+    margin-bottom: 0.5em;
+    counter-increment: list-counter;
+}
+
+ol li::before {
+    content: counter(list-counter);
+    position: absolute;
+    left: -2em;
+    color: #a73c3c;
+    font-weight: bold;
+    font-size: 0.9em;
+}
