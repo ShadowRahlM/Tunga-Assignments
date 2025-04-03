@@ -49,15 +49,20 @@ body {
     padding: 1em;
     color: whitesmoke;
     font-size: larger;
-    /* overflow: auto; */
-    margin-top: 1em;
-    margin-bottom: 1em;
+    position: relative; /* Add this */
+    margin: 1em 0; /* Simplified margins */
+    overflow: hidden; /* Add this to contain the image */
 }
 
 .card article img {
-    max-height: 100%;
-    float: right;
-    margin:0 1em;
+    height: 100%;
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Centers image vertically */
+    object-fit: contain;
+    max-width: 50%; /* Prevents image from taking too much space */
 }
 
 .card article p {
@@ -67,6 +72,7 @@ body {
     position: relative;
     z-index: 1;
     line-height: 1.5;
+    max-width: 60%; /* Ensures text doesn't overlap image */
 }
 
 /* Footer styles */
