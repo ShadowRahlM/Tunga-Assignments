@@ -200,3 +200,23 @@ nav ul li {
   text-align: center;
   padding: 20px 10px 20px 10px;
 }
+
+/*navigation page*/
+.clean-nav {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content:center;
+  width: 100%;
+
+}
+.cp{
+  display: flex;
+  position: sticky;
+  top:10px;
+  justify-content: center;
+  width: auto;
+}
+ .cp li {
+  min-width: 250px;
+  background-color:crimson;
+}

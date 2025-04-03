@@ -4,12 +4,12 @@ div {
     height: 120px;
     
     /* Center the box horizontally */
-    margin: 0 auto;
+    margin: 20rem auto;
     
     /* Center the text both horizontally and vertically */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     
     /* 17px ÷ 16px (default browser font-size) = 1.0625rem */
     font-size: 1.0625rem;
