@@ -103,7 +103,7 @@ a:active {
 /* External link styling */
 a[href^="http"]:not([href*="yourdomain.com"])::after {
   content: "";
-  background-image: url("external-link-52.png");
+  background-image: url("https://via.placeholder.com/16"); /* Placeholder image */
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
