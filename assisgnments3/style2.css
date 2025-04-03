@@ -6,21 +6,33 @@ body {
   }
   
   .container {
+    height: 400px;
     padding: 0.5em;
     border: 5px solid #ccc;
+    overflow: auto;
     position: relative;
   }
   
-  .target {
-    width: 150px;
-    height: 150px;
-    border-radius: 5px;
+  .sidebar {
+    color: white;
     background-color: #663398;
     padding: 1em;
-    color: white;
     position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
+    left:-1rem;
+    width: 150px;
   }
- 
+  
+  .content {
+    padding: 1em;
+    margin-left: 160px;
+  }
+  .container {
+  }
+  
+  .sidebar {
+    position:sticky;
+    top: 0;
+  }
+
+
+  
