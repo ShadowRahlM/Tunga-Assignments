@@ -10,6 +10,8 @@ body {
   font-family: Arial, sans-serif;
   font-size: 18px;
   line-height: 1.6;
+  position: relative;
+  padding-top: 60px; /* Add space for fixed navigation */
 }
 
 /* Layout */
@@ -31,8 +33,8 @@ aside {
 }
 
 nav {
-  flex: 0.5;
-  padding: 20px;
+  flex: initial;
+  padding: initial;
 }
 
 /* Header styling */
@@ -191,44 +193,41 @@ ol li::before {
 }
 
 nav ul li {
-  min-width: 300px;
-  list-style: none; /* Removed list decoration */
-  font-size: 2rem;
-  border: 1px solid #a66;
-  text-align: center;
-  padding: 20px 10px 20px 10px;
+  min-width: initial;
+  border: none;
+  font-size: inherit;
 }
 
-/*navigation page*/
+/* Navigation styling */
 .clean-nav {
-  display: flex;
-  /* flex-direction: column; */
-  justify-content:center;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 #cp {
   display: flex;
-  position: sticky;
-  top: 0;
-  justify-content: space-around; /* Ensures even spacing */
-  background-color: #ffffff; /* Optional: Add background to avoid overlap issues */
-  z-index: 10; /* Ensures it stays above other elements, such as content scrolling underneath. 
-                  This value is chosen to provide sufficient layering without conflicting with other z-index values on the page. */
-  padding: 10px 0; /* Adds some vertical padding */
+  justify-content: space-around;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  list-style: none;
 }
+
 #cp li {
-  flex: 1 1 auto; /* Allows items to grow and shrink as needed, ensuring better responsiveness */
-  min-width: 150px; /* Sets a minimum width to prevent items from becoming too small */
-  max-width: 300px; /* Sets a maximum width to maintain a balanced layout */
+  flex: 1 1 auto;
+  min-width: 150px;
+  max-width: 200px;
+  margin: 0 5px;
   background-color: #a73c3c;
+  border-radius: 4px;
   color: #ffffff; /* Sets text color to white for better visibility */
-  list-style-type: none;
-  border: none; /* Removed border lines */
   text-align: center; /* Centers text inside the items */
   padding: 10px; /* Adds padding for better spacing */
-  margin: 0 5px; /* Adds horizontal spacing between items */
- 
 }
 
 #cp li a {
