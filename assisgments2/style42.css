@@ -194,7 +194,7 @@ nav {
 
 nav ul li {
   min-width: 300px;
-  list-style: none;
+  list-style-type: none;
   font-size: 2rem;
   border: 1px solid #a66;
   text-align: center;
@@ -207,16 +207,25 @@ nav ul li {
   /* flex-direction: column; */
   justify-content:center;
   width: 100%;
-
 }
-.cp{
+
+#cp {
   display: flex;
   position: sticky;
-  top:10px;
-  justify-content: center;
-  width: auto;
+  top: 0;
+  justify-content: space-around; /* Ensures even spacing */
+  background-color: #ffffff; /* Optional: Add background to avoid overlap issues */
+  z-index: 10; /* Ensures it stays above other elements, such as content scrolling underneath. 
+                  This value is chosen to provide sufficient layering without conflicting with other z-index values on the page. */
+  padding: 10px 0; /* Adds some vertical padding */
 }
- .cp li {
-  min-width: 250px;
-  background-color:crimson;
+
+#cp li {
+  flex: 1; /* Ensures all list items in #cp have equal width, distributing space evenly */
+  max-width: none; /* Removes the restriction for better responsiveness */
+  background-color: #a73c3c;
+  list-style-type: none;
+  border: none; /* Removed border lines */
+  text-align: center; /* Centers text inside the items */
+  padding: 10px; /* Adds padding for better spacing */
 }
