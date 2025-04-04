@@ -18,18 +18,21 @@ body {
     background-color: #663398;
     padding: 1em;
     position: absolute;
-    left:-1rem;
+    left:1rem;
     width: 150px;
   }
   
   .content {
     padding: 1em;
     margin-left: 160px;
+    /* margin-top: -11rem; */
   }
   .container {
+
   }
   
   .sidebar {
+    align-items:stretch;
     position:sticky;
     top: 0;
   }
