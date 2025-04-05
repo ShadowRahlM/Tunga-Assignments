@@ -32,7 +32,6 @@ body {
   }
   
   .sidebar {
-    align-items:stretch;
     position:sticky;
     top: 0;
   }
