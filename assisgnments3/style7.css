@@ -23,4 +23,36 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+  /* align-self: ; */
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.right-links{
+  display:flex;
+}
+.left-links{
+  display: flex;
+}
+
+.content{
+  display:flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  margin: 1em;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 2em;
+  position: relative;
+}
+
