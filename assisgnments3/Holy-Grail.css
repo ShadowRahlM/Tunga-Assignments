@@ -82,24 +82,23 @@ body {
   /* Remove any margins that might create gaps */
   margin: 0;
 }
-
-.sidebar ul {
-  list-style: none;
+.sidebar a:hover {
+  opacity: 0.8;
+}
+ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.sidebar a {
+ul :link {
+  margin-bottom: 16px;
   color: #eee;
   text-decoration: none;
-  font-size: 18px;
+  font-size:15px;
   display: block;
   padding: 8px 0;
   transition: opacity 0.2s ease;
-}
-
-.sidebar a:hover {
-  opacity: 0.8;
 }
 
 /* Main Content Area */
@@ -135,14 +134,4 @@ body {
   margin-top: auto;/*makes footer goto the bottom*/
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 
-ul :link {
-  margin-bottom: 16px;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-}
