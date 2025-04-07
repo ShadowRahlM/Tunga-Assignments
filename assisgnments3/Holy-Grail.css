@@ -1,3 +1,39 @@
+/* 
+
+This CSS file defines the layout and styling for a webpage using a flexbox-based design. 
+It includes the following key components:
+
+1. **body**:
+  - Sets the font family, margin, and minimum height for the page.
+  - Configures the body as a flex container with a column direction.
+
+2. **.header**:
+  - Styles the header with a fixed height, dark magenta background, and white bold text.
+  - Aligns content to the start horizontally and centers it vertically.
+
+3. **.footer**:
+  - Styles the footer with a fixed height, light gray background, and dark magenta text.
+  - Uses `margin-top: auto` to push the footer to the bottom of the page.
+  - Centers content both horizontally and vertically.
+
+4. **.sidebar**:
+  - Defines a sidebar with a fixed width, royal blue background, and padding.
+  - Configured as a flex container with a column direction.
+
+5. **.card**:
+  - Styles individual cards with a border, shadow, rounded corners, and padding.
+  - Sets a fixed width and margin for spacing between cards.
+
+6. **ul**:
+  - Removes default list styling and sets text color to light gray.
+
+7. **ul :link**:
+  - Styles links within unordered lists with no text decoration and light gray color.
+
+8. **.main-flex**:
+  - Configures the main content area as a flex container with wrapping enabled.
+  - Sets a minimum width, gap between items, and allows it to grow to fill available space.
+*/
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -7,64 +43,106 @@ body {
   flex-direction: column;
 }
 
+/* Add wrapper for main content */
+.body {
+  flex: 1;
+  display: flex;
+}
+
+/* Header Styles */
+.header-1 {
+  width: 100%;
+}
+
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
-  font-weight: bolder;
   display: flex;
-  justify-content: start;
   align-items: center;
+  padding: 0 16px;
+  font-weight: 900;
 }
 
-.footer {
-  height: 72px;
-  background: #eee;
-  color: darkmagenta;
-  margin-top: auto;
+/* Main Container */
+/* Remove padding from container */
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 1;
+  min-height: 0; /* Prevents overflow issues */
 }
 
+/* Sidebar Styles */
 .sidebar {
   width: 300px;
   background: royalblue;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  flex-shrink: 0;
   padding: 16px;
-  flex:1;
+  box-sizing: border-box;
+  /* Remove any margins that might create gaps */
+  margin: 0;
 }
 
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar a {
+  color: #eee;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 8px 0;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar a:hover {
+  opacity: 0.8;
+}
+
+/* Main Content Area */
+.main-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 32px;
+  flex: 1;
+  align-content: space-evenly;
+  /* Add background color to distinguish from sidebar */
+  background: #fff;
+}
+
+/* Card Styles */
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.06);
   border-radius: 4px;
-  width: 300px;
   padding: 16px;
-  margin: 8px;
-  flex: 0 1 300px;
+  width: 300px;
+}
+
+/* Footer Styles */
+.footer {
+  height: 72px;
+  background: #eee;
+  color: darkmagenta;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-top: auto;/*makes footer goto the bottom*/
 }
 
 ul {
-  color: #eee;
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 ul :link {
-  color: #eee;
+  margin-bottom: 16px;
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  font-weight: 100px;
-  gap: 1;
-}
-
-.main-flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: end;
-  min-width: 85vh;
-  gap: 1em;
-  /* padding:0 25rem; */
-  flex: 1;
 }
