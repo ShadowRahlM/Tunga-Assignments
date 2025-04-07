@@ -106,7 +106,7 @@ body {
 .main-flex {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 1em;
   padding: 32px;
   flex: 1;
   align-content: space-evenly;
