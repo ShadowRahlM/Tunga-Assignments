@@ -22,11 +22,13 @@ button{
     align-items: center;
    
 }
-.card{
+.card {
     border: 2px solid #9EC1FA;
-    width: 15%;
     border-radius: 5px;
-    padding: 0.8em;
+    padding: 1rem;
+    flex: 1 1 300px; /* Flexible width with a minimum size */
+    max-width: 300px;
+    text-align: center;
 }
 header,
 footer{
@@ -55,11 +57,12 @@ header > div{
     align-items: center;
 
 }
-.card-d{
+.card-d {
     display: flex;
-    justify-content:center;
-    gap:10px 20px;
-    margin: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
 }
 .first-class{
     display: flex;
