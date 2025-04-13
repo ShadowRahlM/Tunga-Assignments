@@ -1,92 +1,154 @@
-body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color:#FFFFFF;
+body {
+  font-family: Roboto;
+  background-color: #ffffff;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
-body{
-    display: flex;
-    flex-flow:column;
-    flex:1;
-    box-sizing: border-box;
+body {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  box-sizing: border-box;
 }
-button{
-    color: white;
-    background-color:#3B82F6;
-    border-radius: 5px;
-    width: 25%;
-    min-width: 25%;
+header{
+    position:sticky;
+    top: 0;
 }
-.middle{
-    background-color: #E5E7EB;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-   
-}
-.card {
-    border: 2px solid #9EC1FA;
-    border-radius: 5px;
-    padding: 1rem;
-    flex: 1 1 300px; /* Flexible width with a minimum size */
-    max-width: 300px;
-    text-align: center;
-}
-header,
-footer{
-    background-color: #1F2937;
-    color:#F9FAFB;
-    margin:0;
-    padding:0.5rem;
-}
-ul{
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    
-}
-ul :link{
-    text-decoration: none;
 
-}
-header > div{
-    display: flex;
-    justify-content: space-around;
-}
-.center-body{
-    display: flex;
-    flex-direction:column;
-    align-items: center;
 
+
+.encolsing {
+  display: flex;
+  justify-content: center;
+  background-color: #e5e7eb;
+  padding: 2em;
+  margin: 4em 0;
+}
+.middle {
+  background-color: #e5e7eb;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 50px;
+  max-width: 45%;
+}
+.quote {
+  align-self: flex-end;
+  font-size: 20px;
+  font-style: italic;
 }
 .card-d {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 2rem 0;
+  display: flex;
+  /* flex-wrap: wrap;/ */
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 1em;
 }
-.first-class{
-    display: flex;
-    gap: 2em;
-    flex: 0;
-}
-.pic{
-    display:flex;
-    border: 1px solid #6D747D;
-    background-color: #6D747D;
-    border-radius: 0.2px;
-    flex:0.5;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5em;
 
+.card-container {
+  max-width: 100%;
+  text-align: center;
+  flex-wrap: wrap;/
 }
-.caard{
+.card {
+  border: 3px solid #9ec1fa;
+  border-radius: 10px;
+  padding: 1rem;
+  flex: 1 1 300px; /* Flexible width with a minimum size */
+  text-align: center;
+  min-height: 100px;
+  margin-bottom: 0.2em;
+  max-width: 50%;
+}
+header,
+footer {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 1em;
+}
+ul :link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.header-containter{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 9em;
+  margin-right:28rem;
+}
+.m{
+  background-color: #3b82f6;
+  border: 2px solid #3b82f6;
+  max-width: 20%;
+  border-radius: 5px;
+  padding: 5px;
+} 
+.m,a :link{
+  color: #ffffff;
+  text-decoration: none;
+}
+.center-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-class {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1f2937;
+  color: #e5e7eb;
+  gap: 3em;
+  padding-bottom: 85px;
+}
+.heading {
+  font-weight: 900;
+  font-size: 48px;
+}
+
+.pic {
+  display: flex;
+  border: 1px solid #6d747d;
+  background-color: #6d747d;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  min-width: 45%;
+}
+.caard {
+  display: flex;
+  background-color: #3b82f6;
+  border: 1px solid #3bb2f6;
+  border-radius: 8px;
+  color: #f9fafb;
+  align-items: center;
+  justify-content: space-evenly;
+  /* gap: 15px; */
+  max-width: 75%;
+  margin:2em auto;
+  min-height: 120px;
+}
+button {
+  background-color: #3882f6;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 0.8em;
+  max-width: 100%;
+  color: #ffffff;
+}
+
+footer{
     display: flex;
-    flex-flow:column;
     justify-content: center;
-    background-color:#3B82F6;
-    border-radius: 8px;
-    margin-top:0.5em;
-    margin-bottom: 0.5em;
-    color: #F9FAFB;
+    align-items: center;    
+    margin:2em 0;
+    min-height: 8%;
 }
+
