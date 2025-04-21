@@ -80,6 +80,9 @@
     font-size: 18px;
     text-align: center;
   }
+  .card{
+    height: 200px;
+  }
   
   .footer {
     background-color: #393f4d;
@@ -104,6 +107,13 @@
   .grid-sidebar{
     grid-row: 2/5;
     gap: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+
+  }
+  .item{
+    grid-column: span 1;
+    /* grid-row: span 2; */
   }
   .grid-link{
     display: grid;
@@ -124,4 +134,10 @@
   }
   .grid-article{
     grid-column:2/3;
+    gap: 15px;
+  }
+  .grid-article-container{
+    display: grid;
+    grid-template-columns:repeat(autofit,minmax(250px ,1fr)); 
+    gap: 15px;
   }
