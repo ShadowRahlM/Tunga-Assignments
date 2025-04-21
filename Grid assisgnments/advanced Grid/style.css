@@ -91,9 +91,37 @@
   }
   .grid-container{
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 20% 80% ;
     gap: 4px;
   }
   .grid-header ,.grid-footer{
     grid-column: span 5;
+  }
+  .grid-header{
+    display: grid;
+    grid-template-columns:25% 1fr;
+  }
+  .grid-sidebar{
+    grid-row: 2/5;
+    gap: 50px;
+  }
+  .grid-link{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    list-style: none;
+  }
+  
+  .grid-nav{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column: span 3;
+    list-style: none;
+  }
+  .nav{
+    grid-column: span 3;
+    /* grid-row: span 1; */
+
+  }
+  .grid-article{
+    grid-column:2/3;
   }
