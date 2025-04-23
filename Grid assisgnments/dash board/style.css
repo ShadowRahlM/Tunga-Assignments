@@ -41,20 +41,21 @@ body {
 .sidebar {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr; /* Adjusted to allow space for heading and list */
+  grid-template-rows:auto 1fr;
   gap: 1em;
 }
 
 .sidebar-heading {
-  margin-bottom: 1em; /* Added spacing below the heading */
+  margin-bottom: 1em;
 }
 
 .sidebar,
 ul {
-  list-style: none;
   gap: 1em;
+  list-style: none;
+
   padding: 0;
-  /* margin: 0; */
+  margin: 0;
 }
 
 .sidebar-list {
