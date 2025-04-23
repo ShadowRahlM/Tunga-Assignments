@@ -18,15 +18,64 @@ body {
 
 .main-container {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr; /* Three columns: sidebar, main content, last column */
-  grid-template-rows: auto 1fr; /* Rows: auto for header, 1fr for main content */
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 1fr;
   gap: 1em;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   padding: 1em;
 }
-.header-container{
-  grid-column:span 2;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
 }
+
+.header-container {
+  grid-column: span 2;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #E2E8F0;
+  min-width: 150px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.profile-nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
 .sidebar-container {
   grid-column: 1 / 2;
   grid-row: 1 / -1;
@@ -41,7 +90,7 @@ body {
 .sidebar {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows:auto 1fr;
+  grid-template-rows: auto 1fr;
   gap: 1em;
 }
 
@@ -53,23 +102,12 @@ body {
 ul {
   gap: 1em;
   list-style: none;
-
   padding: 0;
   margin: 0;
 }
 
 .sidebar-list {
   display: grid;
-}
-
-
-.main-section {
-  grid-column: 2 / 3;
-  grid-row: 2;
-  background-color: #f4f4f4;
-  padding: 1em;
-  border-radius: 0.5rem;
-  background-color: #E2E8F0;
 }
 
 .nav,
@@ -85,59 +123,69 @@ a {
   border-radius: 0.5rem;
 }
 
-.last-column {
-  background-color:#E2E8F0;
-  grid-column: 3 / 4; /* Last column */
-  grid-row: 2 / -1; /* Spans from the second row to the last */
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+.main-section {
+  grid-column: 2 / 3;
+  grid-row: 2;
+  background-color: #E2E8F0;
+  padding: 1em;
+  border-radius: 0.5rem;
 }
+
+.main-section .card {
+  border-left: 4px solid orange;
+}
+
 .cards-container {
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Responsive grid */
-  grid-gap: 1em; /* Gap between cards */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1em;
   display: grid;
 }
 
 .card {
-  background-color: #ffffff; /* White background */
-  border: 1px solid #e0e0e0; /* Light gray border */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card h3 {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #333333; /* Dark gray text */
+  color: #333333;
   margin-bottom: 0.5rem;
 }
 
 .card p {
   font-size: 0.9rem;
-  color: #666666; /* Medium gray text */
+  color: #666666;
   line-height: 1.5;
   margin-bottom: 1rem;
+}
+
+.last-column {
+  background-color: #E2E8F0;
+  grid-column: 3 / 4;
+  grid-row: 2 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .announcements {
   background-color: #f9f9f9;
   border-left: 4px solid #1992d4;
   margin: 5em 0;
-  flex: 1 1 0
+  flex: 1 1 0;
 }
 
 .trending {
@@ -155,7 +203,7 @@ a {
 
 .trending-users li {
   font-size: 0.9rem;
-  color: #333333; /* Dark gray text */
+  color: #333333;
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
@@ -164,9 +212,5 @@ a {
 
 .trending-users i {
   font-size: 1.2rem;
-  color: #1992d4; /* Blue icons */
-}
-
-.main-section .card {
-  border-left: 4px solid orange; /* Orange left border */
+  color: #1992d4;
 }
