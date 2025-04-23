@@ -98,7 +98,7 @@ header {
 .sidebar {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 5% 0.4fr;
   gap: 1em;
 }
 
