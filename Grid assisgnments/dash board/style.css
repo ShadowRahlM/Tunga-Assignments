@@ -34,14 +34,26 @@ body {
   background-color: #1992d4;
   padding: 1em;
   border-radius: 0.5rem;
-  margin: 0.5em;
+  margin: 0;
   display: grid;
   color: white;
+}
+.sidebar{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3,22%);
+  gap:1em;
 }
 
 .sidebar,
 ul {
   list-style: none;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-list{
+  display: grid;
 }
 
 
@@ -51,6 +63,7 @@ ul {
   background-color: #f4f4f4;
   padding: 1em;
   border-radius: 0.5rem;
+  background-color: #E2E8F0;
 }
 
 .nav,
@@ -67,6 +80,7 @@ a {
 }
 
 .last-column {
+  background-color:#E2E8F0;
   grid-column: 3 / 4; /* Last column */
   grid-row: 2 / -1; /* Spans from the second row to the last */
   display: flex;
