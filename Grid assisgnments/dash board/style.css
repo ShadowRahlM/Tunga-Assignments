@@ -54,20 +54,24 @@ header {
 }
 
 .profile {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .profile-info {
   display: flex;
-  align-self: flex-start;
-  gap: 0.8em;
+  grid-column: 1/2;
+}
+.profile-nav{
+  grid-column: auto;
+  /* grid-row:1.5/2; */
+  align-items: center;
+  display: flex;
 }
 
 .profile-nav ul {
   display: flex;
+  align-items: flex-end;
   gap: 15px;
   list-style: none;
   padding: 0;
@@ -76,7 +80,7 @@ header {
 
 .profile-nav ul li a {
   text-decoration: none;
-  color: #333;
+  color:white;
 }
 
 .sidebar-container {
