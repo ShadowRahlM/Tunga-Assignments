@@ -27,7 +27,6 @@ body {
 .header-container{
   grid-column:span 2;
 }
-
 .sidebar-container {
   grid-column: 1 / 2;
   grid-row: 1 / -1;
@@ -38,11 +37,16 @@ body {
   display: grid;
   color: white;
 }
-.sidebar{
-  display:grid;
+
+.sidebar {
+  display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3,22%);
-  gap:1em;
+  grid-template-rows: auto 1fr; /* Adjusted to allow space for heading and list */
+  gap: 1em;
+}
+
+.sidebar-heading {
+  margin-bottom: 1em; /* Added spacing below the heading */
 }
 
 .sidebar,
@@ -50,9 +54,10 @@ ul {
   list-style: none;
   gap: 1em;
   padding: 0;
-  margin: 0;
+  /* margin: 0; */
 }
-.sidebar-list{
+
+.sidebar-list {
   display: grid;
 }
 
