@@ -81,8 +81,8 @@ address > a {
 @media (max-width: 768px) {
     /* Tablet and Small Phone */
     .grid-container {
-        display: grid;
-        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-columns:1fr;
         padding: 10px;
     }
 }
