@@ -79,19 +79,12 @@ address > a {
   }
 }
 @media (max-width: 768px) {
-  /* Tablet */
-  .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    padding: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Small Phone */
-  .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    padding: 10px;
-  }
+    /* Tablet and Small Phone */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
 }
 @media (max-width: 768px) {
   /* Tablet */
