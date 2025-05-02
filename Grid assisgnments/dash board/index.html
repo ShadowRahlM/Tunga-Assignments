@@ -1,15 +1,61 @@
+<!-- 
+
+  This HTML file represents a dashboard layout with multiple sections, including a header, sidebar, main content area, and additional columns. 
+  It is styled using external CSS and utilizes the Boxicons library for icons.
+
+  Structure Overview:
+  - <!DOCTYPE html>: Declares the document type as HTML5.
+  - <html>: Root element of the document.
+  - <head>: Contains metadata and links to external resources.
+    - Includes Boxicons for icons and Google Fonts for typography.
+    - Links to an external stylesheet (style.css).
+
+  - <body>: Main content of the document.
+    - <section class="main-container">: Wrapper for the entire dashboard layout.
+      - <section class="header-container">: Contains the header section.
+        - <header>: Includes a search box, notification icon, and user profile information.
+          - Search box with input field and icons.
+          - Profile section with user details and navigation links.
+
+      - <section class="sidebar-container">: Contains the sidebar navigation.
+        - <div class="sidebar">: Sidebar content.
+          - <div class="heading">: Displays the dashboard title with an icon.
+          - <ul class="sidebar-list">: Lists navigation links for different sections (e.g., Home, Profile, Messages, etc.).
+          - Additional list for settings, support, and privacy options.
+
+      - <section class="main-section">: Main content area.
+        - Displays a heading "Your Projects".
+        - <div class="cards-container">: Contains multiple project cards.
+          - Each card includes:
+            - A title for the project.
+            - A brief description.
+            - Icons for actions (e.g., star, show, share).
+
+      - <section class="last-column">: Additional content column.
+        - <div class="card announcements">: Displays announcements with a heading and description.
+        - <div class="card trending">: Displays a list of trending users with icons and usernames.
+
+  Notes:
+  - The layout is designed to be responsive using the "viewport" meta tag.
+  - Icons are provided by the Boxicons library.
+  - Fonts are loaded from Google Fonts (Roboto family).
+  - External CSS (style.css) is used for styling the layout and components.
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dashboard</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="/Grid assisgnments/dash board/assests/css/style.css"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -18,19 +64,35 @@
   </head>
   <body>
     <section class="main-container">
+      <!-- Header Section -->
       <section class="header-container">
         <header>
           <div class="search-box">
             <div><i class="bx bx-search"></i></div>
             <div>
-              <input type="text" placeholder="Search..." class="search-input" />
+              <input
+                type="text"
+                placeholder="Search..."
+                class="search-input"
+                aria-label="Search"
+              />
             </div>
-            <div><i class="bx bxs-bell-ring"></i></div>
-            <div class="user-info">E|M Edwin Mugabi</div>
+            <div><i class="bx bxs-bell-ring" aria-label="Notifications"></i></div>
+            <div class="user-info">
+              <img
+                src="/Grid assisgnments/dash board/assests/img/profile.jpeg"
+                alt="User Profile"
+              />
+              Edwin Mugabi
+            </div>
           </div>
           <div class="profile">
             <div class="profile-info">
-              <img src="" alt="Profile Image" class="profile-image" />
+              <img
+                src="/Grid assisgnments/dash board/assests/img/profile.jpeg"
+                alt="Profile Image"
+                class="profile-image"
+              />
               <div>
                 <p>E|M Hi there,</p>
                 <h2 class="headr2">Edwin Mugabi (@Edwin)</h2>
@@ -46,10 +108,16 @@
           </div>
         </header>
       </section>
+
+      <!-- Sidebar Section -->
       <section class="sidebar-container">
         <div class="sidebar">
           <div class="heading">
-            <i class="bx bx-reflect-vertical">Dashboard</i>
+            <img
+              src="/Grid assisgnments/dash board/assests/icons/view-dashboard.svg"
+              alt="Dashboard Icon"
+            />
+            Dashboard
           </div>
           <div>
             <ul class="sidebar-list">
@@ -70,55 +138,57 @@
           </div>
         </div>
       </section>
+
+      <!-- Main Section -->
       <section class="main-section">
         <h2>Your Projects</h2>
         <div class="cards-container">
-            <div class="card">
+          <div class="card">
             <h3>Super Cool Project</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
               lacinia odio vitae vestibulum vestibulum.
             </p>
             <div class="card-icons">
-              <i class="bx bx-star"></i>
-              <i class="bx bx-show"></i>
-              <i class="bx bx-share"></i>
+              <i class="bx bx-star" aria-label="Star"></i>
+              <i class="bx bx-show" aria-label="Show"></i>
+              <i class="bx bx-share" aria-label="Share"></i>
             </div>
-            </div>
-            <div class="card">
+          </div>
+          <div class="card">
             <h3>Less Cool Project</h3>
             <p>
               Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
               Proin eget tortor risus.
             </p>
             <div class="card-icons">
-              <i class="bx bx-star"></i>
-              <i class="bx bx-show"></i>
-              <i class="bx bx-share"></i>
+              <i class="bx bx-star" aria-label="Star"></i>
+              <i class="bx bx-show" aria-label="Show"></i>
+              <i class="bx bx-share" aria-label="Share"></i>
             </div>
-            </div>
-            <div class="card">
+          </div>
+          <div class="card">
             <h3>Impossible App</h3>
             <p>
               Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero
               malesuada feugiat.
             </p>
             <div class="card-icons">
-              <i class="bx bx-star"></i>
-              <i class="bx bx-show"></i>
-              <i class="bx bx-share"></i>
+              <i class="bx bx-star" aria-label="Star"></i>
+              <i class="bx bx-show" aria-label="Show"></i>
+              <i class="bx bx-share" aria-label="Share"></i>
             </div>
-            </div>
-            <div class="card">
-            <h3>Easy peasy App</h3>
+          </div>
+          <div class="card">
+            <h3>Easy Peasy App</h3>
             <p>
               Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
               dui. Nulla porttitor accumsan tincidunt.
             </p>
             <div class="card-icons">
-              <i class="bx bx-star"></i>
-              <i class="bx bx-show"></i>
-              <i class="bx bx-share"></i>
+              <i class="bx bx-star" aria-label="Star"></i>
+              <i class="bx bx-show" aria-label="Show"></i>
+              <i class="bx bx-share" aria-label="Share"></i>
             </div>
           </div>
           <div class="card">
@@ -128,25 +198,27 @@
               Vivamus suscipit tortor eget felis porttitor volutpat.
             </p>
             <div class="card-icons">
-              <i class="bx bx-star"></i>
-              <i class="bx bx-show"></i>
-              <i class="bx bx-share"></i>
+              <i class="bx bx-star" aria-label="Star"></i>
+              <i class="bx bx-show" aria-label="Show"></i>
+              <i class="bx bx-share" aria-label="Share"></i>
             </div>
           </div>
           <div class="card">
-            <h3>Money maker</h3>
+            <h3>Money Maker</h3>
             <p>
               Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet
               quam id dui posuere blandit.
             </p>
             <div class="card-icons">
-              <i class="bx bx-star"></i>
-              <i class="bx bx-show"></i>
-              <i class="bx bx-share"></i>
+              <i class="bx bx-star" aria-label="Star"></i>
+              <i class="bx bx-show" aria-label="Show"></i>
+              <i class="bx bx-share" aria-label="Share"></i>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Last Column -->
       <section class="last-column">
         <div class="card announcements">
           <h3>Announcements</h3>
@@ -157,12 +229,12 @@
         </div>
         <div class="card trending">
           <h3>Trending</h3>
-          <ul class="trending-users">
-            <li><i class="bx bx-animal-dog"></i> @DogLover123</li>
-            <li><i class="bx bx-animal-cat"></i> @CatFanatic</li>
-            <li><i class="bx bx-animal-bird"></i> @BirdWatcher</li>
-            <li><i class="bx bx-animal-fish"></i> @FishEnthusiast</li>
-          </ul>
+            <ul class="trending-users"></ul>
+            <li><img src="/Grid assisgnments/dash board/assests/imgs/dog.png" alt="Dog Icon" /> @DogLover123</li>
+            <li><img src="/Grid assisgnments/dash board/assests/imgs/cat.png" alt="Cat Icon" /> @CatFanatic</li>
+            <li><img src="/Grid assisgnments/dash board/assests/imgs/bird.png" alt="Bird Icon" /> @BirdWatcher</li>
+            <li><img src="/Grid assisgnments/dash board/assests/imgs/fish.png" alt="Fish Icon" /> @FishEnthusiast</li>
+            </ul>
         </div>
       </section>
     </section>

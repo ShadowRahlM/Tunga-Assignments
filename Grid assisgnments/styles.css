@@ -35,6 +35,7 @@ footer {
   padding: 2em;
   margin: 1em auto;
   gap: 1em;
+  clip-path: polygon(0 20%,100% 0,100% 80,0 100%)
 }
 
 .footerer {

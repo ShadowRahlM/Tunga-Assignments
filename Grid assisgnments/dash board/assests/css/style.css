@@ -1,0 +1,311 @@
+/* Global Styles: Set up base styles for the document */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  height: 100%;
+  margin: 0;
+}
+
+/* Main Container: Defines the grid layout for the dashboard */
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; /* Sidebar, Main Section, Last Column */
+  grid-template-rows: auto 1fr; /* Header and Content Rows */
+  gap: 1em;
+  height: 100vh;
+  padding: 1em;
+}
+
+/* Header: Styles for the header section */
+header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 1.25rem; /* Converted px to rem */
+  background-color: #f4f4f4;
+}
+
+.header-container {
+  grid-column: 2 / 4; /* Spans columns 2 to 3 */
+  grid-row: 1 / 2; /* Occupies the first row */
+  background-color: #f4f4f4;
+  padding: 1em;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap:1rem; /* Add gap between SVG and Home icon */
+}
+.heading { /* Dashboard logo rules */
+  display: flex;
+  align-items: center;
+  filter: brightness(0) invert(1);
+  margin: 1rem 0 2rem 0;
+  padding: 0.2em;
+}
+
+.heading > img {
+  width: 3rem; /* Set a fixed width */
+  height: 3rem; /* Set a fixed height */
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}
+/* Search Box: Styles for the search input and container */
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.search-input {
+  padding: 0.3125rem; /* Converted px to rem */
+  border: 0.0625rem solid #ccc; /* Converted px to rem */
+  border-radius: 0.25rem; /* Converted px to rem */
+  background-color: #e2e8f0;
+  min-width: 9.375rem; /* Converted px to rem */
+}
+.user-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:0.5em;
+}
+.user-info > img{
+  width: 2.5rem; /* Set a fixed width */
+  height: 2.5rem; /* Set a fixed height */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Ensure the image fits within the container */
+}
+
+/* Profile Section: Styles for the profile container */
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10em;
+}
+
+.profile-info > img  {
+  width: 4rem; /* Set a fixed width */
+  height: 4rem; /* Set a fixed height */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Ensure the image fits within the container */
+}
+ .profile-info{
+  display: flex;
+  grid-column: 1/2;
+  gap:1em;
+}
+
+.profile-nav {
+  grid-column: auto;
+  align-items: center;
+  display: flex;
+}
+
+.profile-nav ul {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.9375rem; /* Converted px to rem */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Sidebar: Styles for the sidebar container */
+.sidebar-container {
+  grid-column: 1 / 2; /* Occupies the first column */
+  grid-row: 1 / -1; /* Spans from the first row to the last */
+  background-color: #1992d4;
+  padding: 1em;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5% 0.4fr;
+  gap: 1em;
+}
+
+.sidebar-heading {
+  margin-bottom: 1em;
+}
+
+.sidebar,
+ul {
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-list {
+  display: grid;
+}
+
+.nav,
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav li {
+  background-color: #1992d4;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  border-radius: 0.5rem;
+}
+
+/* Main Section: Styles for the main content area */
+.main-section {
+  grid-column: 2 / 3; /* Occupies the second column */
+  grid-row: 2 / -1; /* Spans from the second row to the last */
+  background-color: #e2e8f0;
+  padding: 1em;
+  border-radius: 0.5rem;
+}
+
+.main-section .card {
+  border-left: 0.25rem solid orange; /* Converted px to rem */
+}
+
+/* Cards: Styles for individual cards in the main section */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 1em;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Last Column: Styles for the announcements and trending sections */
+.last-column {
+  grid-column: 3 / 4; /* Occupies the third column */
+  grid-row: 2 / -1; /* Spans from the second row to the last */
+  background-color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em; /* Ensure spacing inside the column */
+  border-radius: 0.5rem; /* Add consistent styling */
+}
+
+.announcements {
+  background-color: #f9f9f9;
+  border-left: 4px solid #1992d4;
+  padding: 1em;
+  border-radius: 0.5rem;
+}
+
+.trending {
+  background-color: #f9f9f9;
+  border-left: 4px solid #1992d4;
+  padding: 1em;
+  border-radius: 0.5rem;
+}
+
+.trending-users {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trending-users li {
+  font-size: 0.9rem;
+  color: #333333;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trending-users i {
+  font-size: 1.2rem;
+  color: #1992d4;
+}
+
+/* Media Queries: Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: auto auto auto auto; /* Header, Sidebar, Main Section, Last Column */
+  }
+
+  .header-container {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .sidebar-container {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .main-section {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+
+  .last-column {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-container {
+    grid-template-columns: 1fr 2fr 1fr; /* Adjust column proportions */
+  }
+}
+
+/* General Image Styling */
+img {
+  max-width: 100%; /* Ensure images do not exceed their container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove inline spacing */
+}
