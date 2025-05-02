@@ -50,7 +50,7 @@ header {
   display: flex;
   align-items: center;
   filter: brightness(0) invert(1);
-  margin: 1rem 0 2rem 0;
+  margin: 0.5rem 0; /* Adjusted margin for better spacing */
   padding: 0.2em;
 }
 
