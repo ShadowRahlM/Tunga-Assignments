@@ -1,0 +1,53 @@
+/* Base Styles */
+:root {
+    /* Primary Colors */
+    --purple-600: hsl(246, 80%, 60%);
+    --orange-300: hsl(15, 100%, 70%);
+    --blue-300: hsl(195, 74%, 62%);
+    --pink-400: hsl(348, 100%, 68%);
+    --green-400: hsl(145, 58%, 55%);
+    --purple-700: hsl(264, 64%, 52%);
+    --yellow-300: hsl(43, 84%, 65%);
+
+    /* Neutral Colors */
+    --navy-950: hsl(226, 43%, 10%);
+    --navy-900: hsl(235, 46%, 20%);
+    --purple-500: hsl(235, 45%, 61%);
+    --navy-200: hsl(236, 100%, 87%);
+
+    /* Typography */
+    --font-family: 'Rubik', sans-serif;
+    --font-size-body: 18px;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-body);
+    margin: 0;
+    padding: 0;
+    background-color: var(--navy-950);
+    color: var(--navy-200);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 500;
+}
+
+p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Responsive Layout */
+@media (max-width: 375px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        font-size: 18px;
+    }
+}
