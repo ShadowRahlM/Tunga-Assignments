@@ -17,7 +17,7 @@
 
     /* Typography */
     --font-family: 'Rubik', sans-serif;
-    --font-size-body: 18px;
+    --font-size-body: 1rem; /* Base font size */
 }
 
 body {
@@ -27,8 +27,20 @@ body {
     padding: 0;
     background-color: var(--navy-950);
     color: var(--navy-200);
+    display: grid;
 }
-
+/* Layout */
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1.25rem; /* 20px converted to rem */
+    padding: 1.25rem; /* 20px converted to rem */
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr)); /* 300px converted to rem */
+    gap: 1.25rem; /* 20px converted to rem */
+}
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-weight: 500;
@@ -40,14 +52,14 @@ p {
 }
 
 /* Responsive Layout */
-@media (max-width: 375px) {
+@media (max-width: 23.4375rem) { /* 375px converted to rem */
     body {
-        font-size: 16px;
+        font-size: 0.8889rem; /* 16px converted to rem */
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 90rem) { /* 1440px converted to rem */
     body {
-        font-size: 18px;
+        font-size: 1rem; /* 18px converted to rem */
     }
 }
