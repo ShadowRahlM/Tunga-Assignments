@@ -30,7 +30,7 @@ body {
     display: grid;
 }
 /* Layout */
-.dashboard {
+.dashboard{
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 1.25rem; /* 20px converted to rem */
@@ -38,8 +38,30 @@ body {
 }
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr)); /* 300px converted to rem */
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* 300px converted to rem */
     gap: 1.25rem; /* 20px converted to rem */
+}
+
+
+.profile,
+.card{
+  
+    border: 1px solid var(--purple-500);
+    border-radius: 0.625rem; /* 10px converted to rem */
+}
+.profile{
+    grid-column: auto;
+    grid-row: span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem; /* 20px converted to rem */
+    background-color: var(--navy-900);
+}
+.card{
+    /* width: 50%; */
+    padding: 1.25rem; /* 20px converted to rem */
+    background-color: var(--navy-900);
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
