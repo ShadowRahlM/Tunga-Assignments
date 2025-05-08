@@ -1,81 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="/Figma/assests/css/styles.css">
-  <title>Frontend Mentor | Time tracking dashboard</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <section class="dashboard">
-    <div class="profile">
-      <img src="/Figma/assests/images/image-jeremy.png" alt="Profile Icon">
-      <h2>Report for</h2>
-      <h1>Jeremy Robson</h1>
-      <div class="timeframes">
-        <span class="timeframe">Daily</span>
-        <span class="timeframe">Weekly</span>
-        <span class="timeframe">Monthly</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Time Tracking Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <div class="profile">
+        <div class="profile-img">
+          <img src="./images/image-jeremy.png" alt="Profile Image" />
+        </div>
+        <div class="name">
+          <span>Report for</span>
+          <p>Jeremy Robson</p>
+        </div>
       </div>
-    </div>
-    <div class="cards">
+      <nav>
+        <ul>
+          <li class="daily active">Daily</li>
+          <li class="weekly">Weekly</li>
+          <li class="monthly">Monthly</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="cards">
       <div class="card work">
-      <img src="/Figma/assests/images/icon-work.svg" alt="Work Icon">
-      <h3>Work</h3>
-      <p class="current">5hrs</p>
-      <p class="previous">Previous - 7hrs</p>
+        <img src="./images/icon-work.svg" alt="Work Icon" />
+        <h3>Work</h3>
+        <p class="current">5hrs</p>
+        <p class="previous">Previous - 7hrs</p>
       </div>
       <div class="card play">
-      <img src="/Figma/assests/images/icon-play.svg" alt="Play Icon">
-      <h3>Play</h3>
-      <p class="current">1hr</p>
-      <p class="previous">Previous - 2hrs</p>
+        <img src="./images/icon-play.svg" alt="Play Icon" />
+        <h3>Play</h3>
+        <p class="current">1hr</p>
+        <p class="previous">Previous - 2hrs</p>
       </div>
       <div class="card study">
-      <img src="/Figma/assests/images/icon-study.svg" alt="Study Icon">
-      <h3>Study</h3>
-      <p class="current">0hrs</p>
-      <p class="previous">Previous - 1hr</p>
+        <img src="./images/icon-study.svg" alt="Study Icon" />
+        <h3>Study</h3>
+        <p class="current">0hrs</p>
+        <p class="previous">Previous - 1hr</p>
       </div>
       <div class="card exercise">
-      <img src="/Figma/assests/images/icon-exercise.svg" alt="Exercise Icon">
-      <h3>Exercise</h3>
-      <p class="current">1hr</p>
-      <p class="previous">Previous - 1hr</p>
+        <img src="./images/icon-exercise.svg" alt="Exercise Icon" />
+        <h3>Exercise</h3>
+        <p class="current">1hr</p>
+        <p class="previous">Previous - 1hr</p>
       </div>
       <div class="card social">
-      <img src="/Figma/assests/images/icon-social.svg" alt="Social Icon">
-      <h3>Social</h3>
-      <p class="current">1hr</p>
-      <p class="previous">Previous - 3hrs</p>
+        <img src="./images/icon-social.svg" alt="Social Icon" />
+        <h3>Social</h3>
+        <p class="current">1hr</p>
+        <p class="previous">Previous - 3hrs</p>
       </div>
       <div class="card self-care">
-      <img src="/Figma/assests/images/icon-self-care.svg" alt="Self Care Icon">
-      <h3>Self Care</h3>
-      <p class="current">0hrs</p>
-      <p class="previous">Previous - 1hr</p>
-      <!-- </div>
-      <div class="card last">
-      <img src="/Figma/assests/images/" alt="Last Activity Icon">
-      <h3>Last Activity</h3>
-      <p class="current">0hrs</p>
-      <p class="previous">Previous - 1hr</p>
+        <img src="./images/icon-self-care.svg" alt="Self Care Icon" />
+        <h3>Self Care</h3>
+        <p class="current">0hrs</p>
+        <p class="previous">Previous - 1hr</p>
       </div>
-    </div> -->
-  </section>
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">ShadowRahlM"</a>.
-  </div>
-</body>
+    </main>
+  </body>
 </html>

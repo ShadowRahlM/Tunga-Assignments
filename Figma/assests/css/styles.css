@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+}
+
 /* Base Styles */
 :root {
     /* Primary Colors */
@@ -21,14 +30,137 @@
 }
 
 body {
-    font-family: var(--font-family);
-    font-size: var(--font-size-body);
-    margin: 0;
-    padding: 0;
-    background-color: var(--navy-950);
-    color: var(--navy-200);
-    display: grid;
+  background-color: hsl(226, 43%, 10%);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
 }
+
+header {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: hsl(246, 80%, 60%);
+}
+
+.profile .profile-img img {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+
+.profile .name span {
+  font-size: 15px;
+  color: hsl(235, 45%, 61%);
+}
+
+.profile .name p {
+  font-size: 22px;
+  color: hsl(236, 100%, 87%);
+  font-weight: 300;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 10px;
+}
+
+nav ul li {
+  list-style: none;
+  color: hsl(235, 45%, 61%);
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+
+nav ul li:hover {
+  color: #fff;
+}
+
+nav ul li.active {
+  color: #fff;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cards .card {
+  height: 150px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  background-color: hsl(235, 46%, 20%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cards .card img {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.cards .card h3 {
+  font-size: 18px;
+  color: hsl(236, 100%, 87%);
+}
+
+.cards .card .current {
+  font-size: 30px;
+  font-weight: 300;
+  color: hsl(236, 100%, 87%);
+}
+
+.cards .card .previous {
+  font-size: 14px;
+  color: hsl(235, 45%, 61%);
+}
+
+.work {
+  background-color: hsl(15, 100%, 70%);
+}
+
+.play {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.study {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.social {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.self-care {
+  background-color: hsl(43, 84%, 65%);
+}
+
 /* Layout */
 .dashboard{
     display: grid;
@@ -46,7 +178,7 @@ body {
 
 .profile,
 .card{
-  
+    position: relative;
     border: 1px solid var(--purple-500);
     border-radius: 0.625rem; /* 10px converted to rem */
 }
@@ -72,6 +204,12 @@ body {
     padding: 1.25rem; /* 20px converted to rem */
     background-color: var(--navy-900);
 }
+.img-container{
+    display: flex;
+    justify-content: end;
+    /* border: 1px solid black; */
+    /* border-radius: 0.625rem; 10px converted to rem */
+}
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-weight: 500;
@@ -93,4 +231,24 @@ p {
     body {
         font-size: 1rem; /* 18px converted to rem */
     }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
 }
