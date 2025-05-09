@@ -1,9 +1,0 @@
-const fs = require('fs');
-const data = JSON.parse(fs.readFileSync('/home/mugabi/Desktop/Tunga Assignments/Figma/data.json', 'utf8'));
-
-// Example: Get total weekly hours for all activities
-const totalWeeklyHours = data.reduce((total, activity) => {
-  return total + activity.timeframes.weekly.current;
-}, 0);
-
-console.log(`Total Weekly Hours: ${totalWeeklyHours}`);

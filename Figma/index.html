@@ -1,68 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Time Tracking Dashboard</title>
-  </head>
-  <body>
-    <header>
-      <div class="profile">
-        <div class="profile-img">
-          <img src="./images/image-jeremy.png" alt="Profile Image" />
-        </div>
-        <div class="name">
-          <span>Report for</span>
-          <p>Jeremy Robson</p>
-        </div>
-      </div>
-      <nav>
-        <ul>
-          <li class="daily active">Daily</li>
-          <li class="weekly">Weekly</li>
-          <li class="monthly">Monthly</li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-    <main class="cards">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/Figma/assests/css/styles.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="profile">
+      <div class="profile-img">
+        <img src="./assests/images/image-jeremy.png" alt="">
+      </div>
+      <div class="name">
+        <span>Report for</span>
+        <p>Jeremy Robson</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li class="daily">Daily</li>
+        <li class="weekly">Weekly</li>
+        <li class="monthly">Monthly</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="cards">
       <div class="card work">
-        <img src="./images/icon-work.svg" alt="Work Icon" />
-        <h3>Work</h3>
-        <p class="current">5hrs</p>
-        <p class="previous">Previous - 7hrs</p>
+        <img src="./assests/images/icon-work.svg" alt="Work Icon">
+        <div class="time-tracker-card">
+          <div class="card-title">
+            <h3>Work</h3>
+          </div>
+          <div class="time-tracked">
+            <div class="current" id="work-current"></div>
+            <div class="previous" id="work-previous"></div>
+          </div>
+        </div>
       </div>
       <div class="card play">
-        <img src="./images/icon-play.svg" alt="Play Icon" />
-        <h3>Play</h3>
-        <p class="current">1hr</p>
-        <p class="previous">Previous - 2hrs</p>
+          <img src="./assests/images/icon-play.svg" alt="">
+          <div class="time-tracker-card">
+            <div class="card-title">
+              
+              
+            </div>
+            <div class="time-tracked">
+              <div class="current"></div>
+              <div class="previous"></div>
+            </div>
+          </div>
       </div>
       <div class="card study">
-        <img src="./images/icon-study.svg" alt="Study Icon" />
-        <h3>Study</h3>
-        <p class="current">0hrs</p>
-        <p class="previous">Previous - 1hr</p>
+          <img src="./assests/images/icon-study.svg" alt="">
+          <div class="time-tracker-card">
+            <div class="card-title">
+              
+              
+            </div>
+            <div class="time-tracked">
+              <div class="current"></div>
+              <div class="previous"></div>
+            </div>
+          </div>
       </div>
       <div class="card exercise">
-        <img src="./images/icon-exercise.svg" alt="Exercise Icon" />
-        <h3>Exercise</h3>
-        <p class="current">1hr</p>
-        <p class="previous">Previous - 1hr</p>
+          <img src="./assests/images/icon-exercise.svg" alt="">
+          <div class="time-tracker-card">
+            <div class="card-title">
+              
+              
+            </div>
+            <div class="time-tracked">
+              <div class="current"></div>
+              <div class="previous"></div>
+            </div>
+          </div>
       </div>
       <div class="card social">
-        <img src="./images/icon-social.svg" alt="Social Icon" />
-        <h3>Social</h3>
-        <p class="current">1hr</p>
-        <p class="previous">Previous - 3hrs</p>
-      </div>
+          <img src="./assests/images/icon-social.svg" alt="">
+          <div class="time-tracker-card">
+            <div class="card-title">
+              
+              
+            </div>
+            <div class="time-tracked">
+              <div class="current"></div>
+              <div class="previous"></div>
+            </div>
+          </div>
+        </div>
       <div class="card self-care">
-        <img src="./images/icon-self-care.svg" alt="Self Care Icon" />
-        <h3>Self Care</h3>
-        <p class="current">0hrs</p>
-        <p class="previous">Previous - 1hr</p>
-      </div>
-    </main>
-  </body>
+          <img src="./assests/images/icon-self-care.svg" alt="">
+          <div class="time-tracker-card">
+            <div class="card-title">
+              
+              
+            </div>
+            <div class="time-tracked">
+              <div class="current"></div>
+              <div class="previous"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </main>
+
+  <!-- <script src="script.js"></script> -->
+  <script src="./assests/js/script.js"></script>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Shadowrahl</a>.
+  </div> -->
+</body>
 </html>
