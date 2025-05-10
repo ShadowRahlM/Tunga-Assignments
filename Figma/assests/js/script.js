@@ -1,10 +1,11 @@
 // filepath: /assests/js/script.js
 
 // Fetch JSON data
-fetch('./assests/data/data.json')
+fetch('./assets/data/data.json')
   .then(response => response.json())
   .then(data => {
     const timeframes = data.timeframes;
+    const timeframe = 'weekly'; // Change this to 'daily' or 'monthly' as needed
 
     // Update Work Card
     document.getElementById('work-current').textContent = `${timeframes.work.current}hrs`;
@@ -19,8 +20,8 @@ fetch('./assests/data/data.json')
     document.getElementById('study-previous').textContent = `Previous - ${timeframes.study.previous}hrs`;
 
     // Update Exercise Card
-    document.getElementById('exercise-current').textContent = `${timeframes.exercise.current}hrs`;
-    document.getElementById('exercise-previous').textContent = `Previous - ${timeframes.exercise.previous}hrs`;
+    document.getElementById('exercise-current').textContent = `${timeframes.exercise[timeframe].current}hrs`;
+    document.getElementById('exercise-previous').textContent = `Previous - ${timeframes.exercise[timeframe].previous}hrs`;
 
     // Update Social Card
     document.getElementById('social-current').textContent = `${timeframes.social.current}hrs`;
