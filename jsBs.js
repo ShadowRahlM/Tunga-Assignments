@@ -38,11 +38,12 @@ thing === undefined;
 
 
 
-const name = 'ShadowMonarch';
-if(name===='ShadowMonarch'){
-console.log('js sucks ')
-} else{
-console.log('maybe not so much')
+const alias = 'ShadowMonarch';
+if(name === 'ShadowMonarch'){
+	console.log('js sucks ')
+} 
+else{
+	console.log('maybe not so much')
 }
 
 
