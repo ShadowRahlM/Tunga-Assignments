@@ -1,0 +1,87 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set base font and background */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.6;
+    display: grid;
+}
+
+/* Container for layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+th, td {
+    padding: 0.75em 1em;
+    border: 1px solid #dee2e6;
+}
+th {
+    background: #f1f3f5;
+    text-align: left;
+}
+.file-list{
+    list-style:none ;
+    background-color: #0056b3;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0.5rem;
+    
+}
+.file-list li {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    color: #333;
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    th, td {
+        padding: 0.5em;
+    }
+}
